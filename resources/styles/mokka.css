@@ -1,0 +1,231 @@
+
+/* =====================================================
+   SMART ACCOUNTING — DARK MOKKA THEME
+   ===================================================== */
+
+.root {
+    -fx-font-family: "Roboto", "Inter", "DejaVu Sans";
+    -fx-background-color: #17120F;
+    -fx-text-fill: #F0E2D3;
+}
+
+.label {
+    -fx-text-fill: #EAD8C5;
+    -fx-font-family: "Roboto", "Inter", "DejaVu Sans";
+}
+
+.button {
+    -fx-font-family: "Roboto", "Inter", "DejaVu Sans";
+    -fx-background-color: #76513D;
+    -fx-text-fill: #FFF2E5;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-padding: 10 18;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #91684D;
+}
+
+.button:pressed {
+    -fx-background-color: #5E4031;
+}
+
+.text-field,
+.text-area,
+.password-field {
+    -fx-background-color: #211A16;
+    -fx-control-inner-background: #211A16;
+    -fx-text-fill: #F0E2D3;
+    -fx-prompt-text-fill: #927D6D;
+    -fx-highlight-fill: #76513D;
+    -fx-highlight-text-fill: #FFF2E5;
+    -fx-border-color: #594438;
+    -fx-border-radius: 9;
+    -fx-background-radius: 9;
+    -fx-padding: 9;
+}
+
+.text-area .content {
+    -fx-background-color: #211A16;
+    -fx-background-radius: 8;
+}
+
+.combo-box,
+.date-picker {
+    -fx-background-color: #211A16;
+    -fx-border-color: #594438;
+    -fx-border-radius: 9;
+    -fx-background-radius: 9;
+}
+
+.combo-box .list-cell,
+.date-picker .text-field {
+    -fx-background-color: #211A16;
+    -fx-text-fill: #F0E2D3;
+}
+
+.combo-box-popup .list-view,
+.date-picker-popup {
+    -fx-background-color: #211A16;
+    -fx-border-color: #594438;
+}
+
+.combo-box-popup .list-cell {
+    -fx-background-color: #211A16;
+    -fx-text-fill: #F0E2D3;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #49372C;
+}
+
+.tab-pane {
+    -fx-background-color: #17120F;
+}
+
+.tab-pane .tab-header-area {
+    -fx-background-color: #17120F;
+}
+
+.tab-pane .tab-header-background {
+    -fx-background-color: #17120F;
+}
+
+.tab {
+    -fx-background-color: #211A16;
+    -fx-background-radius: 9 9 0 0;
+    -fx-padding: 9 15;
+}
+
+.tab .tab-label {
+    -fx-text-fill: #BBA795;
+    -fx-font-family: "Roboto", "Inter", "DejaVu Sans";
+}
+
+.tab:selected {
+    -fx-background-color: #49372C;
+}
+
+.tab:selected .tab-label {
+    -fx-text-fill: #F4D6B9;
+}
+
+.tab-content-area {
+    -fx-background-color: #17120F;
+}
+
+.table-view,
+.mokka-table {
+    -fx-background-color: #211A16;
+    -fx-control-inner-background: #211A16;
+    -fx-control-inner-background-alt: #292019;
+    -fx-table-cell-border-color: #3D3027;
+    -fx-border-color: #594438;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-padding: 2;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #30231C;
+    -fx-background-radius: 10 10 0 0;
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-background-color: #30231C;
+    -fx-border-color: transparent transparent #594438 transparent;
+    -fx-size: 40;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #E8C9AA;
+    -fx-font-family: "Roboto", "Inter", "DejaVu Sans";
+    -fx-font-weight: bold;
+    -fx-padding: 9;
+}
+
+.table-view .table-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #EAD8C5;
+    -fx-border-color: transparent transparent #3D3027 transparent;
+    -fx-padding: 10 9;
+    -fx-font-family: "Roboto", "Inter", "DejaVu Sans";
+}
+
+.table-row-cell {
+    -fx-background-color: #211A16;
+    -fx-cell-size: 39;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #292019;
+}
+
+.table-row-cell:empty {
+    -fx-background-color: #211A16;
+    -fx-border-color: transparent;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #594438;
+}
+
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: #FFF2E5;
+}
+
+.table-view .placeholder .label {
+    -fx-text-fill: #927D6D;
+}
+
+.scroll-pane,
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical,
+.scroll-bar:horizontal {
+    -fx-background-color: #211A16;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #594438;
+    -fx-background-radius: 8;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #76513D;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: #211A16;
+}
+
+.check-box {
+    -fx-text-fill: #EAD8C5;
+}
+
+.check-box .box {
+    -fx-background-color: #211A16;
+    -fx-border-color: #76513D;
+    -fx-border-radius: 4;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: #F0D1B0;
+}
+
+.separator .line {
+    -fx-border-color: #49372C;
+}
+
+.tooltip {
+    -fx-background-color: #30231C;
+    -fx-text-fill: #F0E2D3;
+    -fx-border-color: #594438;
+    -fx-background-radius: 7;
+}
