@@ -25,3 +25,7 @@ Thumbs.db
 *.db
 *.sqlite
 *.sqlite3
+
+# Gradle generated files
+.gradle/
+build/
