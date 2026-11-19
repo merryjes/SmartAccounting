@@ -1,0 +1,27 @@
+# Compiled Java files
+bin/
+target/
+*.class
+
+# IDE settings
+.idea/
+.vscode/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.backup
+*.bak
+
+# Local configuration and secrets
+.env
+*.local.properties
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Local database files
+*.db
+*.sqlite
+*.sqlite3
