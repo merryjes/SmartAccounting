@@ -158,7 +158,21 @@ public class SmartAccountingApp extends Application  {
         TableView<String[]> journalTable = buildTable("ENTRY ID","DATE","REFERENCE","STATUS","ACCOUNT","DESCRIPTION","DEBIT","CREDIT");
         mainTabPane = new TabPane();
         mainTabPane.setTabClosingPolicy(TabPane.TabClosingPolicy.UNAVAILABLE);
-        mainTabPane.getTabs().addAll( new Tab("01  ACCOUNTS", buildChartOfAccountsPane()), new Tab("02  JOURNAL ENTRY", buildJournalEntryPane(journalTable)), new Tab("03  GENERAL JOURNAL", buildGeneralJournalPane(stage,journalTable)), new Tab("04  LEDGER", buildGeneralLedgerPane(stage)), new Tab("05  TRIAL BALANCE", buildTrialBalancePane(stage)), new Tab("06  ADJUSTMENTS", buildAdjustingEntriesPane()), new Tab("07  INCOME STATEMENT", buildIncomeStatementPane(stage)));
+        DashboardPane dashboard = new DashboardPane();
+        mainTabPane.getTabs().addAll(
+            new Tab("00  DASHBOARD", dashboard.build(
+                () -> mainTabPane.getSelectionModel().select(2),
+                () -> mainTabPane.getSelectionModel().select(4),
+                () -> mainTabPane.getSelectionModel().select(7)
+            )),
+            new Tab("01  ACCOUNTS", buildChartOfAccountsPane()),
+            new Tab("02  JOURNAL ENTRY", buildJournalEntryPane(journalTable)),
+            new Tab("03  GENERAL JOURNAL", buildGeneralJournalPane(stage,journalTable)),
+            new Tab("04  LEDGER", buildGeneralLedgerPane(stage)),
+            new Tab("05  TRIAL BALANCE", buildTrialBalancePane(stage)),
+            new Tab("06  ADJUSTMENTS", buildAdjustingEntriesPane()),
+            new Tab("07  INCOME STATEMENT", buildIncomeStatementPane(stage))
+        );
         root.setCenter(mainTabPane);
         VBox footer = new VBox(new Label("DARK MOKKA EDITION   •   YOUR RECORDS STAY IN YOUR DATABASE"));
         footer.setPadding(new Insets(9,20,9,20));
@@ -505,7 +519,7 @@ private VBox buildJournalEntryPane(TableView<String[]> journalTable) {
             }
             recalculateTotals();
             entryFeedbackLabel.setText("Editing UNPOSTED entry #"+entryId);
-            mainTabPane.getSelectionModel().select(1);
+            mainTabPane.getSelectionModel().select(2);
         } catch(Exception ex) {
             msg.setText("Could not load entry: "+ex.getMessage());
         }
