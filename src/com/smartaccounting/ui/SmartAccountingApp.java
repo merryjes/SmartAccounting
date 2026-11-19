@@ -171,7 +171,8 @@ public class SmartAccountingApp extends Application  {
             new Tab("04  LEDGER", buildGeneralLedgerPane(stage)),
             new Tab("05  TRIAL BALANCE", buildTrialBalancePane(stage)),
             new Tab("06  ADJUSTMENTS", buildAdjustingEntriesPane()),
-            new Tab("07  INCOME STATEMENT", buildIncomeStatementPane(stage))
+            new Tab("07  INCOME STATEMENT", buildIncomeStatementPane(stage)),
+            new Tab("08  FINANCIAL ANALYTICS", new FinancialAnalyticsPane().build())
         );
         root.setCenter(mainTabPane);
         VBox footer = new VBox(new Label("DARK MOKKA EDITION   •   YOUR RECORDS STAY IN YOUR DATABASE"));
